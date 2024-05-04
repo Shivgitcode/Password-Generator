@@ -162,13 +162,10 @@ function randomPassword() {
     for (let i = 0; i < (range - functions.length); i++) {
         password += functions[randomFunction(functions.length)]()
     }
-    console.log(password)
-    console.log(range)
-    console.log(functions)
-    shufflePassword()
+
+
     displayPass.innerHTML = password
     password = ""
-    shufflePass = ""
 
 
 }
