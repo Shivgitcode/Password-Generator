@@ -34,26 +34,11 @@ function randomFunction(length) {
 function randomUppercase() {
     const upperCase = randomNum(65, 90)
     const letter = String.fromCharCode(upperCase)
-    // console.log(letter)
 
-    // const letter = upperCase.toString()
-    // return letter
     return letter
 
 
 }
-
-
-
-slider.addEventListener("input", (e) => {
-    // console.log(e.target.value)
-    range = e.target.value
-    displayLength.innerHTML = range
-    console.log(range)
-})
-
-console.log(range)
-
 function randomLowerCase() {
     const lowerCase = randomNum(97, 122)
     const letter = String.fromCharCode(lowerCase)
@@ -92,11 +77,11 @@ function displayLen(e) {
 
 }
 
-
-
-// displayLength.addEventListener("input",displayLen)
-
-
+slider.addEventListener("input", (e) => {
+    range = e.target.value
+    displayLength.innerHTML = range
+    console.log(range)
+})
 
 uppercase.addEventListener("click", (e) => {
     if (e.target.checked) {
@@ -155,13 +140,11 @@ other.addEventListener("click", (e) => {
 
 })
 
-// const functions = [randomUppercase, randomLowerCase, randomSymbol, randomNumber]
 
 function randomPassword() {
     if (checkCount < 1) {
         myAlert.classList.add("opacity-100")
         myAlert.classList.remove("opacity-0")
-        // myAlert.style.transition = "all 2"
 
         setTimeout(() => {
             myAlert.classList.remove("opacity-100")
@@ -183,10 +166,10 @@ function randomPassword() {
     console.log(range)
     console.log(functions)
     shufflePassword()
-    // shufflePassword()    
     displayPass.innerHTML = password
     password = ""
     shufflePass = ""
+
 
 }
 
@@ -201,4 +184,3 @@ clip.addEventListener("click", copyToClip)
 
 
 
-// console.log(randomUppercase())
